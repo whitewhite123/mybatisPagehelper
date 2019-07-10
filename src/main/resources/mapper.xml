@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.msj.mapper.UserMapper">
+    <resultMap id="user" type="com.msj.pojo.User">
+        <id property="id" column="id" javaType="java.lang.Integer"/>
+        <result property="name" column="name" javaType="java.lang.String"/>
+        <result property="age" column="age" javaType="java.lang.Integer"/>
+    </resultMap>
+    <select id="selectAll" resultMap="user">
+        select * from user
+    </select>
+</mapper>
